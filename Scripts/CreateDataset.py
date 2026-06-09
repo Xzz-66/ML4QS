@@ -25,6 +25,7 @@ class_map = {
 # rename_map = {
 #     "Abdullah": "subj01",
 #     "Momo":   "subj02",
+#     "Essam":   "subj03",
 # }
 
 
