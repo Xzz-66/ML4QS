@@ -136,8 +136,9 @@ def detect_outliers(df):
         df_["PC1"] = X_vis[:,0]
         df_["PC2"] = X_vis[:,1]
 
-        # outlier_mask = (df_["LOF_Label"] == -1)
-        # df_.loc[outlier_mask,sensor_cols] = np.nan
+        outlier_mask = (df_["LOF_Label"] == -1)
+        df_.loc[outlier_mask,sensor_cols] = np.nan
+        df_[sensor_cols] = df_[sensor_cols].interpolate().ffill().bfill()
 
         results.append(df_)
     
@@ -193,11 +194,6 @@ def table_missing_data(df):
     # missing_data = missing_data[missing_data['NaN Count'] > 0]
     return pd.DataFrame(missing_data)
 
-
-def plot_accel_z(df):
-    cols_of_interest = [x for x in df.columns if 'accel' in x][:3]
-
-
         
 
 def main():
@@ -215,6 +211,11 @@ def main():
     visualize_PCA(outlier_dfs['subj1'])
 
     df_combined = pd.concat(outlier_dfs)
+
+    output_dir = base_data_dir
+    output_path = output_dir / 'DataSetPerSubjectClean.csv'
+    df_combined.to_csv(output_path)
+    print(f"\nSaved to {output_path}")
 
     # number and percentage of outliers
     print(table_missing_data(df_combined.loc["subj2"]))
