@@ -9,7 +9,7 @@ from pathlib import Path
 # from Python3Code.Chapter2.CreateDataset import CreateDataset
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-base_data_dir = BASE_DIR / "Datasets" 
+base_data_dir = BASE_DIR / "Datasets" / "Subjects"
 print(base_data_dir.resolve())
 
 experiment_type = ['Pushup', 'Squat','Pullup']
@@ -25,7 +25,6 @@ class_map = {
 # rename_map = {
 #     "Abdullah": "subj01",
 #     "Momo":   "subj02",
-#     "Essam":   "subj03",
 # }
 
 

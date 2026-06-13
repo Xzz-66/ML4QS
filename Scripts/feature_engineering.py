@@ -19,9 +19,9 @@ BASE_DATA_DIR = BASE_DIR / "Datasets"
 
 SAMPLE_RATE = 50
 WINDOW_SIZES = [3.0]  # Window sizes in seconds TODO: compare different window sizes for performance
-FREQ_WINDOW_SIZE = '5s'  # Window size for frequency features
+FREQ_WINDOW_SIZE = '3s'  # Window size for frequency features
 MAX_DECIMALS = 4  # Maximum decimal places to keep
-NPERSG = 50
+NPERSG = 128
 
 
 def compute_frequency_features(data, fs=SAMPLE_RATE, nperseg=NPERSG):
@@ -151,7 +151,7 @@ def compute_vector_magnitude(ddf):
 
 def process_combined_data():
     """Process the combined dataset with robust feature engineering"""
-    input_path = BASE_DATA_DIR / 'DataSetPerSubjectClean.csv'
+    input_path = BASE_DATA_DIR / 'Outlier_df' / 'DataSetPerSubjectClean.csv'
 
         # Read and clean data
     df_ = pd.read_csv(input_path, dtype={
@@ -180,6 +180,7 @@ def process_combined_data():
     # if 'subject_id' in df_.columns:
     #     df_ = df_.set_index('subject_id')
 
+    df_['unique_exer_id'] = df_['subject_id'] + df_['exercise_type'] + '_' +  df_['session'].astype(str)
 
     df_ = compute_vector_magnitude(df_)
 
@@ -188,7 +189,7 @@ def process_combined_data():
     sensor_cols = [col for col in df_.columns if col not in excluded_cols]
 
 
-    results = []
+    feat_results = []
     for (subj, exercise, session), group_df in df_.groupby(['subject_id', 'exercise_type', 'session']):
         print(f"Processing {subj} - {exercise}")
         
@@ -196,19 +197,31 @@ def process_combined_data():
         freq_feats = compute_frequency_domain_features(group_df, sensor_cols)
 
         # combine features
-        feats = pd.concat([time_feats, freq_feats], axis = 1)
+        feats_df = pd.concat([time_feats, freq_feats], axis = 1)
 
-        feats['subject_id']    = subj
-        feats["exercise_type"] = exercise
-        feats["session"] = session
-        feats["exercise_class"] = group_df["exercise_class"].iloc[0]
+        feats_df['subject_id']    = subj
+        feats_df["exercise_type"] = exercise
+        feats_df["session"] = session
+        feats_df["unique_exer_id"] = group_df["unique_exer_id"].iloc[0]
+        feats_df["exercise_class"] = group_df["exercise_class"].iloc[0]
 
-        feature_cols = [col for col in feats.columns if col not in ['subject_id', 'exercise_type', 'session', 'exercise_class']]
+        feat_results.append(feats_df)
+    
+    features_df = pd.concat(feat_results, ignore_index=True)  
 
-        X = feats[feature_cols]
+
+    lof_results = []
+    for exer_id, group in features_df.groupby(['unique_exer_id']):
+        feature_cols = [col for col in group.columns if col not in ['subject_id', 'exercise_type', 'session', 'exercise_class', 'unique_exer_id']]
+
+        X = group[feature_cols].copy()
 
         X = X.replace([np.inf, -np.inf], np.nan)
         X = X.dropna(axis=1, how= 'all')
+
+
+        imputer = SimpleImputer(strategy="median")
+        X = pd.DataFrame(imputer.fit_transform(X), columns=X.columns, index = X.index)
 
         # Remove correlated features
         corr = X.corr().abs()
@@ -216,14 +229,10 @@ def process_combined_data():
         to_drop = [col for col in upper.columns if any(upper[col] > 0.95)]
         X = X.drop(columns = to_drop)
 
-        imputer = SimpleImputer(strategy="median")
-        X = pd.DataFrame(imputer.fit_transform(X), columns=X.columns, index = X.index)
-
         if len(X) < 20:
-            feats["LOF_Label"] = 1
-            feats["LOF_Score"] = np.nan
-
-            results.append(feats)
+            group["LOF_Label"] = 1
+            group["LOF_Score"] = np.nan
+            lof_results.append(group)
             continue
 
 
@@ -231,22 +240,22 @@ def process_combined_data():
         X_pca = perform_PCA(X_scaled)
         X_vis = perform_PCA(X_scaled, num_components=2)
 
-        feats["PC1"] = X_vis[:,0]
-        feats["PC2"] = X_vis[:,1]
+        group["PC1"] = X_vis[:,0]
+        group["PC2"] = X_vis[:,1]
 
         labels, scores = perform_lof(X_pca)
 
-        feats["LOF_Label"] = labels
-        feats["LOF_Score"] = scores
+        group["LOF_Label"] = labels
+        group["LOF_Score"] = scores
 
-        feats = feats[feats["LOF_Label"] == 1].copy()
+        group = group[group["LOF_Label"] == 1].copy()
 
 
-        results.append(feats)
+        lof_results.append(group)
 
         
 
-    features_df = pd.concat(results, ignore_index=True)  
+    features_df = pd.concat(lof_results, ignore_index=True)  
 
     return features_df
     
@@ -299,7 +308,7 @@ def feature_importance(df, top_k = 50):
     # Create directories if they don't exist
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    drop_cols = ["subject_id", "exercise_type", "session", "PC1", "PC2", "LOF_Label", "LOF_Score"]
+    drop_cols = ["subject_id", "exercise_type", "session", "PC1", "PC2", "LOF_Label", "LOF_Score", "unique_exer_id"]
 
     X = df.drop(columns = drop_cols + ["exercise_class"])
     y = df["exercise_class"]
@@ -331,7 +340,7 @@ def feature_importance(df, top_k = 50):
     selected_features = importance_df.head(top_k)["feature"].tolist()
     X_selected = X[selected_features]
 
-    metadata = df[["subject_id", "exercise_type","session"]].reset_index(drop= True)
+    metadata = df[["subject_id", "exercise_type","session", "unique_exer_id"]].reset_index(drop= True)
 
 
     

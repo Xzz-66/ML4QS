@@ -10,7 +10,7 @@ from sklearn.neighbors import LocalOutlierFactor
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent  
-base_data_dir = BASE_DIR / "Datasets" 
+base_data_dir = BASE_DIR / "Datasets" / "Subjects"
 
 
 def get_csv_paths():
@@ -194,6 +194,11 @@ def table_missing_data(df):
     # missing_data = missing_data[missing_data['NaN Count'] > 0]
     return pd.DataFrame(missing_data)
 
+
+def plot_accel_z(df):
+    cols_of_interest = [x for x in df.columns if 'accel' in x][:3]
+
+
         
 
 def main():
@@ -212,7 +217,8 @@ def main():
 
     df_combined = pd.concat(outlier_dfs)
 
-    output_dir = base_data_dir
+    output_dir = BASE_DIR / "Datasets" / 'Outlier_df'
+    output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / 'DataSetPerSubjectClean.csv'
     df_combined.to_csv(output_path)
     print(f"\nSaved to {output_path}")
