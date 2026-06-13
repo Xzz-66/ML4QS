@@ -64,10 +64,10 @@ def evaluate_model(y_test, y_pred, fold, all_classes = [0, 1, 2]):
 
     # Classification report
     print("\nClassification Report:")
-    print(classification_report(y_test, y_pred))
+    print(classification_report(y_test, y_pred, labels = all_classes, zero_division=0))
 
     # Confusion matrix
-    cm = confusion_matrix(y_test, y_pred)
+    cm = confusion_matrix(y_test, y_pred, labels= all_classes)
     plt.figure(figsize=(8, 6))
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
                 xticklabels=all_classes,
