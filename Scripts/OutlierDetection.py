@@ -149,7 +149,7 @@ def detect_outliers(df):
 
 
 def visualize_PCA(df):
-    sensor_to_plot = "accel_Y (m/s^2)"
+    sensor_to_plot = "PC2"
     for exercise in df["exercise_type"].unique():
 
         subset = df[df["exercise_type"] == exercise]
@@ -167,7 +167,7 @@ def visualize_PCA(df):
 
         if exercise == 'Pullup':
             plt.figure(figsize=(14,5))
-            plt.plot(subset[sensor_to_plot].values, color='lightgrey', label='Raw signal')
+            plt.plot(subset.index, subset[sensor_to_plot].values, color='lightgrey', label='Raw signal')
             plt.scatter(outliers.index, outliers[sensor_to_plot], color='red', label='Outliers')        
             plt.title(f"{exercise} - {sensor_to_plot}")
             plt.xlabel("Time")
