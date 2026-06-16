@@ -1,0 +1,74 @@
+{
+  "1D-CNN": [
+    {
+      "fold": 1,
+      "test_subject": 0,
+      "accuracy": 0.6753246753246753,
+      "macro_f1": 0.51168857742084,
+      "n_test": 231,
+      "present_classes": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "fold": 2,
+      "test_subject": 1,
+      "accuracy": 0.6551724137931034,
+      "macro_f1": 0.6547619047619048,
+      "n_test": 29,
+      "present_classes": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 3,
+      "test_subject": 2,
+      "accuracy": 0.7796610169491526,
+      "macro_f1": 0.7780671296296297,
+      "n_test": 118,
+      "present_classes": [
+        1,
+        2
+      ]
+    }
+  ],
+  "TCN": [
+    {
+      "fold": 1,
+      "test_subject": 0,
+      "accuracy": 0.6190476190476191,
+      "macro_f1": 0.48883994126284874,
+      "n_test": 231,
+      "present_classes": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "fold": 2,
+      "test_subject": 1,
+      "accuracy": 0.8275862068965517,
+      "macro_f1": 0.8133848133848134,
+      "n_test": 29,
+      "present_classes": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 3,
+      "test_subject": 2,
+      "accuracy": 0.5084745762711864,
+      "macro_f1": 0.43717105263157896,
+      "n_test": 118,
+      "present_classes": [
+        1,
+        2
+      ]
+    }
+  ]
+}
