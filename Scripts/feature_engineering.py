@@ -1,6 +1,8 @@
 import dask.dataframe as dd
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 from scipy import signal
 from scipy.stats import entropy
 from pathlib import Path
@@ -16,9 +18,10 @@ warnings.filterwarnings('ignore')  # Suppress all warnings
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 BASE_DATA_DIR = BASE_DIR / "Datasets" 
+PLOT_DIR   = BASE_DIR / "plots"
 
 SAMPLE_RATE = 50
-WINDOW_SIZES = [3.0]  # Window sizes in seconds TODO: compare different window sizes for performance
+WINDOW_SIZES = [0.5, 2.0, 3.0, 3.5]  # Window sizes in seconds TODO: compare different window sizes for performance
 FREQ_WINDOW_SIZE = '3s'  # Window size for frequency features
 MAX_DECIMALS = 4  # Maximum decimal places to keep
 NPERSG = 128
@@ -209,9 +212,21 @@ def process_combined_data():
     
     features_df = pd.concat(feat_results, ignore_index=True)  
 
+    print("\n" + "="*60)
+    print("Data After Feature Engineering")
+    print("="*60)
+    print(f"Data Shape: {features_df.shape}")
+    print(f"Rows: {features_df.shape[0]}")
+    print(f"Columns: {features_df.shape[1]}")
 
+
+    total_before_corr = []
+    total_after_corr = []
     lof_results = []
     for exer_id, group in features_df.groupby(['unique_exer_id']):
+
+        print("\n" + "="*60)
+        print(f"session: {exer_id}")
         feature_cols = [col for col in group.columns if col not in ['subject_id', 'exercise_type', 'session', 'exercise_class', 'unique_exer_id']]
 
         X = group[feature_cols].copy()
@@ -223,11 +238,28 @@ def process_combined_data():
         imputer = SimpleImputer(strategy="median")
         X = pd.DataFrame(imputer.fit_transform(X), columns=X.columns, index = X.index)
 
+        feats_before = X.shape[1]
+        total_before_corr.append(feats_before)
         # Remove correlated features
         corr = X.corr().abs()
         upper = corr.where(np.triu(np.ones(corr.shape), k = 1).astype(bool))
         to_drop = [col for col in upper.columns if any(upper[col] > 0.95)]
+        
+
+        # print(f"Features before correlation filtering: {feats_befor}")
+        # print(f"Number of features that were dropped: {len(to_drop)}")
+
+        # if len(to_drop) > 0:
+        #     print("\nTop features that were dropped: ")
+        #     print(to_drop[:20])
+
         X = X.drop(columns = to_drop)
+
+        feats_after = X.shape[1]
+        total_after_corr.append(feats_after)
+        # print(f"Features after correlation filtering: {feats_after}")
+        
+
 
         if len(X) < 20:
             group["LOF_Label"] = 1
@@ -238,17 +270,17 @@ def process_combined_data():
 
         X_scaled = scale_data(X)
         X_pca = perform_PCA(X_scaled)
-        X_vis = perform_PCA(X_scaled, num_components=2)
+        # X_vis = perform_PCA(X_scaled, num_components=2)
 
-        group["PC1"] = X_vis[:,0]
-        group["PC2"] = X_vis[:,1]
+        # group["PC1"] = X_vis[:,0]
+        # group["PC2"] = X_vis[:,1]
 
         labels, scores = perform_lof(X_pca)
 
         group["LOF_Label"] = labels
         group["LOF_Score"] = scores
 
-        group = group[group["LOF_Label"] == 1].copy()
+        group = group[group["LOF_Label"] == 1].copy()       #Remove outliers 
 
 
         lof_results.append(group)
@@ -256,8 +288,18 @@ def process_combined_data():
         
 
     features_df = pd.concat(lof_results, ignore_index=True)  
+    avg_feats_before = np.round(np.mean(total_before_corr))
+    avg_feats_after = np.round(np.mean(total_after_corr))
 
-    return features_df
+    print("\n" + "="*60)
+    print("Data Correlation Summary")
+    print("="*60)
+    print(f"Features Before filtering: {avg_feats_before}")
+    print(f"Features After filtering: {avg_feats_after}")
+    print(f"Removed Features: {avg_feats_before - avg_feats_after}")
+
+
+    return features_df, features_df.shape[1], avg_feats_before, avg_feats_after
     
 
     
@@ -298,6 +340,20 @@ def process_combined_data():
 
 #     return X_clean, y_clean
 
+def plot_feature_importance(importance_df, top_feats = 50):
+    feats_to_plot = (importance_df.head(top_feats).sort_values("importance"))
+
+    plt.figure(figsize=(12, 8))
+    plt.barh(feats_to_plot["feature"], feats_to_plot["importance"])
+    plt.xlabel("Importance")
+    plt.ylabel("Feature")
+    plt.title(f"Top {top_feats} Important Features")
+    plt.tight_layout()
+    path = PLOT_DIR / "Feature_Importance.png"
+    plt.savefig(path, dpi=150, bbox_inches="tight")
+    print(f"\nComparison plot saved to {path}")
+    plt.close()
+
 
 def feature_importance(df, top_k = 50):
     output_dir = BASE_DATA_DIR / 'engineered_data'
@@ -310,7 +366,7 @@ def feature_importance(df, top_k = 50):
 
     drop_cols = ["subject_id", "exercise_type", "session", "PC1", "PC2", "LOF_Label", "LOF_Score", "unique_exer_id"]
 
-    X = df.drop(columns = drop_cols + ["exercise_class"])
+    X = df.drop(columns = [col for col in drop_cols if col in df.columns] + ["exercise_class"])
     y = df["exercise_class"]
 
 
@@ -320,6 +376,14 @@ def feature_importance(df, top_k = 50):
 
     imputer = SimpleImputer(strategy="median")
     X = pd.DataFrame(imputer.fit_transform(X), columns=X.columns)
+
+    print("\n" + "="*60)
+    print("BEFORE FEATURE IMPORTANCE")
+    print("="*60)
+
+    print(f"Shape: {X.shape}")
+
+
 
     rf = RandomForestClassifier(
     n_estimators=500,
@@ -340,9 +404,20 @@ def feature_importance(df, top_k = 50):
     selected_features = importance_df.head(top_k)["feature"].tolist()
     X_selected = X[selected_features]
 
+    print("\n" + "="*60)
+    print("Data After Feature Selection")
+    print("="*60)
+
+    print("\n" + "="*60)
+    print(f"Number Selected Features: {len(selected_features)}")
+    print(f"Data Shape After Feature Selection {X_selected.shape}")
+
+    
+
     metadata = df[["subject_id", "exercise_type","session", "unique_exer_id"]].reset_index(drop= True)
 
-
+    df_importance = pd.DataFrame(importance_df)
+    plot_feature_importance(df_importance)
     
     finalDataset = pd.concat([metadata, X_selected.reset_index(drop = True), y.reset_index(drop=True)], axis= 1)
     finalDataset.to_csv(output_path1, index = False)
@@ -354,11 +429,27 @@ def feature_importance(df, top_k = 50):
     return finalDataset, importance_df
 
 
+def plot_summary_features(engineered, before_corr, after_corr, selected = 50):
+    feat_category = ["Engineered Features", "Before Correlation Filtering",
+                     "After Correlation Filtering", "Selected Features"]
+
+    feat_counts = [engineered, before_corr, after_corr, selected]
+    plt.figure(figsize=(12,5))
+    plt.bar(feat_category, feat_counts)
+    plt.ylabel("Number of Features")
+    plt.title("Number of Features (Feature Engineering)")
+    path = PLOT_DIR / "Summary_Features.png"
+    plt.savefig(path, dpi=150, bbox_inches="tight")
+    print(f"\nComparison plot saved to {path}")
+    plt.close()
+
+
 def main():
-    df = process_combined_data()
+    df, eng, before_corr, after_corr = process_combined_data()
 
     # print(X_clean.isna().sum().sum())
     df_extracted_features, importance_feats_ = feature_importance(df)
+    plot_summary_features(eng, before_corr, after_corr)
 
     print(df_extracted_features.head(10))
 

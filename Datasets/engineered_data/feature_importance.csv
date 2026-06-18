@@ -1,181 +1,721 @@
 feature,importance
-accel_z_min_3_0s,0.05800494958513662
-accel_z_mean_3_0s,0.0488695974893287
-orient_z_rms_3_0s,0.0472762470632906
-orient_Yaw (°)_rms_3_0s,0.04637254807930785
-orient_Pitch (°)_max_3_0s,0.03786946218211418
-orient_Direct (°)_rms_3_0s,0.034279434205118656
-accel_magnitude_mean_3_0s,0.03343008480439667
-orient_Roll (°)_rms_3_0s,0.03223939605964075
-accel_x_min_3_0s,0.03192355098456932
-orient_Direct (°)_mean_3_0s,0.02984014793906886
-gyro_z_rms_3_0s,0.028819655024235277
-accel_magnitude_rms_3_0s,0.026309615242002593
-orient_w_rms_3_0s,0.025043787204699734
-orient_Pitch (°)_mean_3_0s,0.023034163339159
-gyro_z_std_3_0s,0.022632459471962584
-orient_w_mean_3_0s,0.021318144232039083
-accel_magnitude_max_3_0s,0.02038840082333185
-accel_z_max_3_0s,0.01980102976450627
-orient_Yaw (°)_mean_3_0s,0.01879659981066014
-orient_Direct (°)_min_3_0s,0.01856869240276437
-gyro_magnitude_mean_3_0s,0.018082592947455303
-gyro_z_var_3_0s,0.016201319695826045
-linacc_Y_var_3_0s,0.014960756942910589
-gyro_magnitude_rms_3_0s,0.014560859338083841
-linacc_Y_std_3_0s,0.014275422446823328
-orient_Direct (°)_max_3_0s,0.013776890231174704
-orient_w_min_3_0s,0.013742410921990139
-accel_x_mean_3_0s,0.013731441028530984
-accel_z_rms_3_0s,0.0135237873143617
-gyro_z_min_3_0s,0.013060059442409592
-orient_Yaw (°)_max_3_0s,0.01158581580047528
-orient_Yaw (°)_min_3_0s,0.01115576480255504
-orient_w_max_3_0s,0.009825506497142355
-linacc_Y_max_3_0s,0.008934355979094633
-orient_Pitch (°)_min_3_0s,0.008268779703914002
-accel_z_std_3_0s,0.007980046503615801
-linacc_Y_mean_3_0s,0.006731967863877725
-accel_y_min_3_0s,0.006668439688705631
-accel_z_var_3_0s,0.00653019709747762
-accel_x_max_3_0s,0.006456914674885402
-orient_y_var_3_0s,0.005936863914609665
-orient_Pitch (°)_rms_3_0s,0.0057585650742673945
-accel_y_mean_3_0s,0.005559445072617992
-linacc_Z_rms_3_0s,0.005345346233303623
-orient_z_mean_3_0s,0.0051587055541823645
-linacc_X_mean_3_0s,0.005016929965029716
-gyro_z_range_3_0s,0.004919342426277169
-gyro_magnitude_var_3_0s,0.0048557463362578655
-accel_y_max_3_0s,0.004547530905832375
-gyro_y_rms_3_0s,0.004359594093450283
-orient_y_std_3_0s,0.004027670860416042
-orient_x_max_3_0s,0.0033998543885274974
-linacc_Z_mean_3_0s,0.003184222584382263
-accel_y_rms_3_0s,0.0030383071922257046
-accel_x_rms_3_0s,0.002984409525275669
-orient_x_min_3_0s,0.002908946258321696
-linacc_Z_var_3_0s,0.002890644578411612
-linacc_Z_std_3_0s,0.0026158646363899393
-orient_Roll (°)_mean_3_0s,0.0025962199395645333
-linacc_Y_rms_3_0s,0.0024451376709985965
-orient_x_mean_3_0s,0.0024379980522422845
-orient_x_rms_3_0s,0.002320703292592562
-orient_Direct (°)_range_3_0s,0.0022208125836930257
-orient_w_var_3_0s,0.0020541441567804657
-gyro_y_min_3_0s,0.0018760258881110627
-orient_z_max_3_0s,0.0018240230019960957
-gyro_z_max_3_0s,0.001784105030001745
-orient_Direct (°)_std_3_0s,0.0017061934696652062
-orient_y_rms_3_0s,0.00169054057663753
-orient_Direct (°)_skew_3_0s,0.0016214258847261664
-accel_z_range_3_0s,0.0015901384301379151
-orient_Pitch (°)_range_3_0s,0.0015347530851046991
-gyro_magnitude_std_3_0s,0.0015105923699211996
-orient_Direct (°)_kurt_3_0s,0.00150744121568789
-accel_x_range_3_0s,0.0014993095397317084
-orient_z_var_3_0s,0.0014960858000253293
-linacc_Y_min_3_0s,0.0014745342622215294
-orient_Roll (°)_min_3_0s,0.0014739365267548322
-orient_Yaw (°)_var_3_0s,0.0013518704026661544
-linacc_X_rms_3_0s,0.0013396938367630994
-gyro_x_rms_3_0s,0.0011744525842809245
-orient_Roll (°)_max_3_0s,0.001151580616353876
-linacc_Y_range_3_0s,0.001092319858082201
-linacc_X_min_3_0s,0.001078465571212825
-orient_Pitch (°)_var_3_0s,0.0010571448659102897
-accel_magnitude_min_3_0s,0.0009420095881920262
-gyro_z_mean_3_0s,0.000934897604447465
-accel_x_var_3_0s,0.0009130749547495418
-accel_x_std_3_0s,0.0008477647010475228
-gyro_magnitude_max_3_0s,0.0008411077181294487
-pressure_X (hPa)_mean_3_0s,0.0008404949876392443
-orient_y_min_3_0s,0.0008240703527564472
-orient_y_mean_3_0s,0.0008146032147347984
-gyro_y_max_3_0s,0.0008073934907566917
-accel_x_skew_3_0s,0.0007368002810542527
-gyro_x_min_3_0s,0.0006748280796147047
-gyro_x_mean_3_0s,0.0006610072306590435
-orient_w_std_3_0s,0.000656746507511547
-orient_Yaw (°)_std_3_0s,0.0006342412454274334
-orient_z_range_3_0s,0.0006187800073181942
-gyro_magnitude_range_3_0s,0.0005923714527711412
-orient_y_range_3_0s,0.0005147122346036576
-linacc_Z_range_3_0s,0.000507332103513574
-orient_Pitch (°)_std_3_0s,0.00048516463014150615
-orient_z_skew_3_0s,0.00045786294290376805
-accel_magnitude_std_3_0s,0.00043924466784693475
-pressure_X (hPa)_var_3_0s,0.0004271800038597947
-gyro_x_max_3_0s,0.00042423080994409866
-gyro_magnitude_min_3_0s,0.0004241104339666406
-orient_w_range_3_0s,0.0004188784380842479
-orient_Pitch (°)_skew_3_0s,0.00039884278442111476
-pressure_X (hPa)_kurt_3_0s,0.0003467811315233653
-accel_magnitude_range_3_0s,0.0003145898444418506
-pressure_X (hPa)_range_3_0s,0.0003134633193275028
-linacc_X_var_3_0s,0.0003029882436704799
-accel_y_std_3_0s,0.0002803026469906866
-orient_z_std_3_0s,0.0002700534941774906
-linacc_X_max_3_0s,0.000257211333298391
-orient_Direct (°)_var_3_0s,0.00025253194762437986
-pressure_X (hPa)_min_3_0s,0.0002371519445475201
-linacc_X_range_3_0s,0.0002291559396451556
-gyro_x_std_3_0s,0.00022199785953787876
-accel_magnitude_kurt_3_0s,0.00021344428381670817
-orient_z_min_3_0s,0.00021168494724704744
-linacc_Z_min_3_0s,0.0002104262089396322
-orient_Roll (°)_range_3_0s,0.00020161906635140063
-gyro_y_mean_3_0s,0.00018859248818980972
-linacc_X_std_3_0s,0.00018489722346591044
-linacc_Z_max_3_0s,0.00017937237474373422
-pressure_X (hPa)_std_3_0s,0.00017579649777811575
-accel_y_range_3_0s,0.00017182541452993638
-gyro_y_var_3_0s,0.00016878960125825857
-orient_Yaw (°)_range_3_0s,0.0001501496405238977
-orient_x_var_3_0s,0.0001398840331107546
-orient_x_std_3_0s,0.0001382462292986229
-gyro_x_var_3_0s,0.00013663734274552443
-accel_z_skew_3_0s,0.00011235006342964941
-orient_x_skew_3_0s,0.00011048219265845712
-gyro_y_std_3_0s,0.00010496364262689345
-gyro_magnitude_kurt_3_0s,8.928192702045924e-05
-gyro_x_skew_3_0s,8.567611616559376e-05
-orient_y_max_3_0s,8.514833671407162e-05
-accel_y_var_3_0s,8.115753445370923e-05
-orient_x_range_3_0s,7.835312977829063e-05
-orient_Roll (°)_std_3_0s,7.75642373236955e-05
-pressure_X (hPa)_max_3_0s,7.734874132978812e-05
-pressure_X (hPa)_skew_3_0s,6.523388102610665e-05
-pressure_X (hPa)_rms_3_0s,6.250360140047927e-05
-gyro_y_range_3_0s,4.600780002399382e-05
-accel_z_kurt_3_0s,4.517452571495566e-05
-orient_w_skew_3_0s,4.403023556880175e-05
-gyro_z_skew_3_0s,4.248285729424807e-05
-accel_magnitude_var_3_0s,3.169740490251341e-05
-orient_Yaw (°)_skew_3_0s,2.8572043336408118e-05
-orient_z_kurt_3_0s,2.6051299933697672e-05
-orient_Roll (°)_skew_3_0s,1.7312829832966367e-05
-gyro_magnitude_skew_3_0s,1.6977312865467156e-05
-gyro_y_skew_3_0s,1.4596242642272613e-05
-orient_Roll (°)_kurt_3_0s,9.13937547600914e-06
-accel_magnitude_skew_3_0s,8.852495617371692e-06
-orient_Roll (°)_var_3_0s,5.917758332911839e-06
-orient_Yaw (°)_kurt_3_0s,4.44261620732209e-06
-gyro_x_range_3_0s,4.405535159559446e-06
-orient_y_skew_3_0s,0.0
-orient_x_kurt_3_0s,0.0
-gyro_z_kurt_3_0s,0.0
-accel_x_kurt_3_0s,0.0
-orient_y_kurt_3_0s,0.0
-accel_y_skew_3_0s,0.0
-linacc_X_skew_3_0s,0.0
-accel_y_kurt_3_0s,0.0
-linacc_X_kurt_3_0s,0.0
+orient_Yaw (°)_rms_3_0s,0.029483942497906104
+accel_z_mean_2_0s,0.028904321832649977
+accel_z_mean_3_0s,0.027696825490417944
+accel_z_min_3_5s,0.023391211523357124
+accel_z_min_0_5s,0.02309885707875422
+accel_z_min_3_0s,0.022580159630463986
+orient_z_rms_3_5s,0.021328863031723044
+orient_Roll (°)_rms_0_5s,0.019547664708107624
+accel_z_min_2_0s,0.019505400275006152
+orient_Yaw (°)_rms_0_5s,0.01937898073838136
+orient_Yaw (°)_rms_3_5s,0.01694715817223284
+accel_z_mean_3_5s,0.01639096492530709
+accel_magnitude_rms_2_0s,0.015922361898517572
+orient_z_rms_3_0s,0.015296732860796795
+orient_z_rms_2_0s,0.014654552917460144
+orient_Roll (°)_rms_3_0s,0.01432814307714009
+orient_Pitch (°)_max_0_5s,0.014307408642221145
+orient_z_rms_0_5s,0.014067506955370436
+accel_magnitude_rms_0_5s,0.01297176608135638
+orient_Direct (°)_mean_3_5s,0.012861530905677697
+gyro_z_rms_2_0s,0.012816823822959416
+orient_Yaw (°)_rms_2_0s,0.012571266479490842
+orient_Roll (°)_rms_2_0s,0.01226033160154005
+accel_magnitude_mean_3_0s,0.011891522050082062
+orient_w_rms_3_5s,0.011878965914103217
+accel_z_mean_0_5s,0.011109825386443653
+accel_magnitude_mean_0_5s,0.011066572896552537
+gyro_z_rms_3_0s,0.010968780119003003
+orient_w_mean_0_5s,0.010799979440799723
+orient_Direct (°)_max_3_0s,0.010646551834789304
+orient_w_rms_3_0s,0.010497215324356043
+orient_Roll (°)_rms_3_5s,0.009940024343772988
+accel_magnitude_mean_2_0s,0.009885802135619935
+orient_Direct (°)_max_3_5s,0.009678647335483206
+orient_Direct (°)_mean_3_0s,0.009412853429442076
+accel_magnitude_rms_3_0s,0.009262256877993378
+orient_w_mean_3_5s,0.009077782021509268
+accel_x_min_3_0s,0.008865661550191362
+accel_x_min_3_5s,0.008373526511586704
+orient_Direct (°)_rms_2_0s,0.008191243413345834
+orient_Direct (°)_mean_0_5s,0.008039382612036187
+accel_x_min_2_0s,0.00801621626721217
+orient_w_rms_2_0s,0.007791524489628334
+orient_Direct (°)_rms_0_5s,0.007624293383715578
+gyro_magnitude_mean_2_0s,0.007505461403221981
+orient_Pitch (°)_max_2_0s,0.007385265802910307
+orient_Direct (°)_rms_3_0s,0.007287154036573737
+orient_w_mean_2_0s,0.007143774739346641
+gyro_magnitude_mean_0_5s,0.006959494803776963
+accel_magnitude_rms_3_5s,0.006950885453796493
+orient_w_rms_0_5s,0.006944035012324689
+orient_Direct (°)_mean_2_0s,0.006757235119100241
+accel_z_rms_3_5s,0.0065102143786998756
+gyro_magnitude_rms_2_0s,0.006316840953817196
+orient_w_min_3_0s,0.0061953458662835055
+gyro_z_std_3_0s,0.006126665799810879
+gyro_magnitude_rms_3_0s,0.006095902900460691
+gyro_z_rms_3_5s,0.00605133174325291
+orient_Pitch (°)_max_3_0s,0.005980743997270306
+orient_w_min_0_5s,0.005915826221023864
+orient_w_max_3_5s,0.005805781546909292
+gyro_magnitude_mean_3_5s,0.005789941473613925
+orient_Pitch (°)_max_3_5s,0.0057484106380167885
+orient_Yaw (°)_max_0_5s,0.00567676648492162
+gyro_magnitude_rms_3_5s,0.005563977343097659
+orient_w_min_2_0s,0.005522536359893669
+gyro_magnitude_rms_0_5s,0.005513564833707766
+accel_magnitude_max_2_0s,0.00545144760168575
+gyro_z_var_3_0s,0.005210038858192892
+orient_Yaw (°)_min_3_0s,0.005207964931912614
+gyro_magnitude_mean_3_0s,0.0049336274024156055
+accel_z_max_0_5s,0.004857347563619594
+orient_Direct (°)_min_2_0s,0.004804678991701921
+orient_Yaw (°)_mean_0_5s,0.004746853736999851
+accel_y_min_2_0s,0.004343655934610796
+orient_Yaw (°)_min_2_0s,0.0043030892724739795
+orient_Direct (°)_min_3_0s,0.004288164071738836
+orient_Yaw (°)_mean_3_0s,0.004169152141864612
+orient_Pitch (°)_mean_0_5s,0.004163357119743755
+orient_Pitch (°)_mean_3_0s,0.004113623751694843
+accel_magnitude_max_3_5s,0.003785045972963241
+orient_Yaw (°)_min_3_5s,0.0037420877384890723
+accel_z_rms_2_0s,0.003693330472099357
+gyro_z_var_3_5s,0.003666120697855028
+gyro_z_std_2_0s,0.0036223607546455104
+orient_Yaw (°)_min_0_5s,0.003487531873721004
+orient_w_mean_3_0s,0.0034670436730233076
+accel_x_min_0_5s,0.0034504979552470298
+gyro_z_min_3_0s,0.0033052116773751943
+orient_Direct (°)_min_3_5s,0.0032243349310068265
+accel_z_rms_0_5s,0.0031775189687854076
+orient_w_min_3_5s,0.003138537601083699
+orient_Yaw (°)_max_3_5s,0.003118342585243409
+orient_Direct (°)_max_0_5s,0.0031174399797028744
+orient_Yaw (°)_max_3_0s,0.0030726272913972163
+accel_magnitude_mean_3_5s,0.0029653019441831107
+gyro_z_rms_0_5s,0.0029233714065663753
+linacc_Y_mean_2_0s,0.0028967504067328198
+accel_x_mean_3_0s,0.0028605381636143397
+orient_w_max_0_5s,0.0028428216960918575
+orient_Direct (°)_rms_3_5s,0.0028351974242201974
+linacc_Y_mean_3_5s,0.0027036525861965375
+gyro_magnitude_var_3_5s,0.0026928650805106806
+orient_Pitch (°)_mean_2_0s,0.0023760559715719936
+accel_y_min_3_0s,0.002207604512042755
+accel_z_max_3_5s,0.002181254888053698
+orient_w_max_2_0s,0.002175244497661463
+orient_w_max_3_0s,0.002017757559015217
+gyro_z_var_2_0s,0.0019818584717652362
+orient_Yaw (°)_mean_2_0s,0.0019468437208986207
+gyro_z_var_0_5s,0.0019193452425840766
+gyro_z_std_0_5s,0.0019119308606310012
+orient_Direct (°)_max_2_0s,0.001852969812018571
+orient_Direct (°)_min_0_5s,0.0018426308716072218
+accel_z_rms_3_0s,0.0018298310521842353
+gyro_z_min_3_5s,0.001811650169967659
+orient_Pitch (°)_min_0_5s,0.0017896262669630791
+linacc_X_mean_2_0s,0.001782043099268926
+linacc_Y_mean_3_0s,0.0017049129025477837
+orient_Yaw (°)_mean_3_5s,0.0015927816795201443
+orient_Pitch (°)_min_3_0s,0.0015512628418445867
+accel_x_mean_2_0s,0.0015453261203450589
+accel_x_max_0_5s,0.0015105703470105196
+gyro_z_range_3_5s,0.0014895954183683305
+linacc_Z_mean_2_0s,0.00143921367524541
+gyro_y_rms_3_0s,0.001437242646798395
+accel_y_rms_2_0s,0.0014310946305780149
+accel_y_min_0_5s,0.0013270262798616241
+accel_magnitude_max_0_5s,0.0012554364676767298
+accel_x_max_3_0s,0.0012050535617642915
+accel_y_mean_0_5s,0.001151994268347614
+accel_magnitude_max_3_0s,0.001135658487971612
+orient_Pitch (°)_min_3_5s,0.001035064869568755
+gyro_z_min_0_5s,0.0010285251030410618
+orient_y_var_3_0s,0.0010196218223666703
+accel_x_mean_3_5s,0.0009739778797033782
+gyro_z_std_3_5s,0.0009562062368357136
+orient_z_mean_3_0s,0.0009507040370274673
+orient_Yaw (°)_max_2_0s,0.0009386118790388074
+accel_y_max_2_0s,0.000895730801927627
+accel_y_mean_2_0s,0.0008936337326740192
+gyro_z_min_2_0s,0.0008685109089836813
+orient_Roll (°)_mean_2_0s,0.000817309356168527
+accel_magnitude_min_3_0s,0.0008111115211017996
+linacc_Z_mean_3_0s,0.0007832906596193371
+gyro_z_range_0_5s,0.000770666570114186
+gyro_magnitude_std_3_5s,0.000758786423654479
+orient_Roll (°)_mean_0_5s,0.000728929566690634
+accel_x_max_3_5s,0.0007243048141891672
+gyro_y_mean_3_5s,0.0007171008320519077
+orient_x_max_2_0s,0.0007168088612807212
+accel_y_var_3_5s,0.0006853148362633511
+accel_z_max_2_0s,0.0006840524245415242
+orient_Roll (°)_mean_3_5s,0.0006212822579506182
+linacc_Y_max_0_5s,0.0005980166851660584
+orient_x_mean_2_0s,0.0005970993453590352
+orient_x_max_3_0s,0.0005931282741862946
+accel_y_range_0_5s,0.000590128990022918
+accel_y_max_0_5s,0.0005814694271274628
+accel_y_mean_3_0s,0.0005753919261360269
+accel_x_skew_0_5s,0.0005393282428313084
+orient_z_var_3_5s,0.0005225056969122484
+gyro_x_rms_2_0s,0.000513167039419975
+accel_y_mean_3_5s,0.0005010223391039927
+orient_x_mean_0_5s,0.00048155203027334107
+linacc_Y_max_3_0s,0.0004627382207091592
+orient_x_max_0_5s,0.00045347859448086015
+gyro_x_rms_3_5s,0.0004355209941497376
+gyro_y_rms_2_0s,0.0004117765362751061
+accel_y_min_3_5s,0.00040751438029110995
+orient_x_rms_3_5s,0.0003734519979345773
+orient_y_rms_3_5s,0.0003653986518832643
+gyro_x_mean_0_5s,0.00035417255253040493
+orient_x_max_3_5s,0.00034907096790895567
+accel_y_max_3_5s,0.0003465014007226213
+orient_Roll (°)_min_3_5s,0.0003306313772467609
+orient_Pitch (°)_min_2_0s,0.00031379586649160456
+accel_z_var_2_0s,0.00029593295842601065
+linacc_Y_rms_0_5s,0.0002906747153338532
+accel_z_max_3_0s,0.00028369374250374535
+gyro_magnitude_var_2_0s,0.00027268012321660643
+orient_Roll (°)_min_0_5s,0.00027076970270638106
+linacc_Y_min_3_5s,0.0002688899864552041
+orient_z_std_0_5s,0.0002568717363363567
+gyro_x_rms_3_0s,0.0002531759760944031
+accel_z_std_3_5s,0.000251236356624388
+orient_Roll (°)_max_3_5s,0.00024054208428392126
+gyro_x_rms_0_5s,0.00023781539829875064
+gyro_z_mean_3_5s,0.0002314200327608975
+gyro_magnitude_min_0_5s,0.00022340475001111145
+orient_z_max_3_0s,0.0002201107152273361
+orient_z_var_2_0s,0.000215579401982201
+accel_z_std_3_0s,0.000213071063083997
+orient_Yaw (°)_std_3_5s,0.0002130674359622952
+orient_z_min_3_5s,0.00021099685483180037
+linacc_Y_max_2_0s,0.00021008522350851003
+linacc_Y_std_3_0s,0.00020920341928242666
+orient_y_min_3_5s,0.00019553222741590457
+gyro_x_mean_2_0s,0.00019287188323420464
+gyro_magnitude_min_2_0s,0.00018836974691689837
+orient_x_min_3_5s,0.00018341102645193566
+orient_w_std_0_5s,0.00017963030886638818
+linacc_Y_rms_2_0s,0.00017451352284987478
+gyro_y_rms_3_5s,0.0001683597850909981
+orient_Direct (°)_var_3_5s,0.00016645163850493208
+linacc_Y_min_2_0s,0.0001564567210064979
+linacc_Z_std_2_0s,0.00015493399345731425
+orient_x_min_0_5s,0.00015311909421465638
+orient_y_rms_0_5s,0.0001524541158498859
+linacc_Y_max_3_5s,0.00014810816787510142
+orient_y_rms_2_0s,0.00014637296326799234
+orient_x_mean_3_0s,0.00014558215505205095
+linacc_X_min_3_0s,0.00014234302256540136
+linacc_Y_min_0_5s,0.0001411622993154591
+linacc_Y_var_3_0s,0.00013749007245869772
+linacc_Y_std_2_0s,0.00013626044815148928
+gyro_y_rms_0_5s,0.0001358468084538832
+gyro_x_var_2_0s,0.00013364844274347442
+orient_Roll (°)_min_2_0s,0.00013212058431501724
+gyro_y_min_2_0s,0.00013180749775224527
+orient_Roll (°)_mean_3_0s,0.0001314941805871206
+orient_y_max_3_0s,0.00013009713787245442
+gyro_z_mean_3_0s,0.00012774498514157745
+linacc_X_min_3_5s,0.00012281747728221557
+orient_Pitch (°)_rms_2_0s,0.00012211187791735128
+orient_x_rms_0_5s,0.0001217543654816636
+linacc_X_rms_0_5s,0.00012159972839164871
+orient_z_min_0_5s,0.00012094302894580059
+pressure_X (hPa)_mean_3_5s,0.00011908514820953307
+orient_Roll (°)_max_2_0s,0.00011746098585448656
+pressure_X (hPa)_min_0_5s,0.00011450085553105411
+gyro_magnitude_min_3_5s,0.0001130178197226343
+orient_x_rms_3_0s,0.00011151286779831972
+orient_x_mean_3_5s,0.000110304929310464
+accel_x_std_0_5s,0.00010893903158103075
+gyro_x_std_3_0s,0.00010471306618407124
+orient_Direct (°)_var_3_0s,0.00010390667394701926
+accel_z_var_0_5s,9.932765219538793e-05
+gyro_x_var_3_0s,9.808583161595132e-05
+linacc_Y_mean_0_5s,9.450877297091133e-05
+gyro_magnitude_max_3_0s,9.286824486574969e-05
+orient_z_mean_0_5s,9.264312507905923e-05
+gyro_y_max_2_0s,9.239109019577563e-05
+orient_x_min_2_0s,9.21517046351346e-05
+accel_y_rms_0_5s,9.166632301168916e-05
+linacc_Y_range_3_0s,9.039499717986314e-05
+orient_z_max_3_5s,8.98645002211503e-05
+accel_x_rms_3_0s,8.773712893453726e-05
+orient_w_range_2_0s,8.738411762328519e-05
+linacc_Y_range_3_5s,8.696964427353686e-05
+orient_Direct (°)_std_3_0s,8.65107744257483e-05
+orient_Direct (°)_range_3_5s,8.450376468181612e-05
+orient_Yaw (°)_std_3_0s,8.312049741805045e-05
+orient_Direct (°)_var_2_0s,8.289270578286419e-05
+linacc_Y_var_2_0s,8.256281050700414e-05
+orient_Yaw (°)_var_3_5s,8.227679804782041e-05
+orient_z_min_3_0s,8.159229366121011e-05
+orient_w_std_3_0s,8.128366396782992e-05
+linacc_Y_var_0_5s,7.840745279609461e-05
+gyro_x_max_0_5s,7.786371349026872e-05
+orient_Pitch (°)_rms_3_0s,7.745275704070096e-05
+orient_z_mean_2_0s,7.672338971802463e-05
+gyro_y_mean_2_0s,7.672237941032568e-05
+linacc_X_rms_3_5s,7.642855157507276e-05
+linacc_X_rms_2_0s,7.579055088646685e-05
+orient_x_min_3_0s,7.553555678939003e-05
+gyro_z_mean_0_5s,7.538958208783338e-05
+orient_z_min_2_0s,7.509443968947465e-05
+orient_w_std_3_5s,7.381092828360593e-05
+orient_y_min_3_0s,7.216562589763897e-05
+pressure_X (hPa)_mean_0_5s,7.112177661993347e-05
+gyro_x_max_3_0s,7.038040022028343e-05
+accel_y_std_2_0s,6.881378590477467e-05
+orient_Roll (°)_min_3_0s,6.82062134271282e-05
+orient_x_std_2_0s,6.601224174759268e-05
+gyro_y_mean_3_0s,6.546596641085322e-05
+gyro_magnitude_min_3_0s,6.312802812446078e-05
+linacc_X_var_3_0s,6.297506418575461e-05
+linacc_Z_var_3_0s,5.89169928150009e-05
+gyro_x_mean_3_0s,5.814740995761472e-05
+gyro_z_max_3_0s,5.706136841104023e-05
+orient_Roll (°)_range_0_5s,5.657708996686032e-05
+linacc_X_min_2_0s,5.652315413462099e-05
+orient_z_mean_3_5s,5.596885602875235e-05
+orient_z_max_0_5s,5.5062205982691775e-05
+orient_x_std_3_0s,5.5034215973668686e-05
+orient_Pitch (°)_skew_3_0s,5.474986137815894e-05
+orient_Direct (°)_range_3_0s,5.3904809138415305e-05
+gyro_magnitude_max_0_5s,5.318879657425516e-05
+gyro_x_max_3_5s,5.252598053195485e-05
+linacc_X_mean_3_0s,5.189671826135859e-05
+orient_y_var_0_5s,5.135026918091956e-05
+orient_w_range_3_5s,5.049779181410688e-05
+orient_x_var_2_0s,4.929267629228773e-05
+linacc_Z_min_3_0s,4.715911800992891e-05
+orient_y_var_2_0s,4.709147755037714e-05
+orient_y_std_2_0s,4.63149726554867e-05
+orient_Pitch (°)_std_3_5s,4.589961064645793e-05
+pressure_X (hPa)_rms_2_0s,4.585622656682702e-05
+orient_Direct (°)_var_0_5s,4.550271480861379e-05
+pressure_X (hPa)_max_0_5s,4.5278509221926896e-05
+orient_Roll (°)_std_0_5s,4.517078189823801e-05
+gyro_z_max_0_5s,4.380196973045763e-05
+accel_y_std_3_0s,4.2500331741100976e-05
+linacc_X_min_0_5s,4.214413292592571e-05
+linacc_Z_max_0_5s,4.198508844703254e-05
+accel_x_rms_3_5s,4.165483475574484e-05
+accel_y_max_3_0s,4.0347222223985746e-05
+orient_Pitch (°)_var_0_5s,4.0147492254060885e-05
+gyro_x_min_0_5s,3.600457887366402e-05
+orient_Direct (°)_std_2_0s,3.5621332932149856e-05
+accel_x_rms_0_5s,3.545691292064761e-05
+gyro_x_mean_3_5s,3.530935439536793e-05
+gyro_y_range_2_0s,3.501176371364365e-05
+orient_Direct (°)_range_0_5s,3.4732472225043606e-05
+pressure_X (hPa)_mean_3_0s,3.469890461016493e-05
+accel_z_range_3_0s,3.443778206029156e-05
+accel_x_var_3_0s,3.410083423860007e-05
+orient_y_mean_3_0s,3.396338055948194e-05
+orient_Pitch (°)_skew_3_5s,3.3418723800652075e-05
+gyro_magnitude_range_0_5s,3.337187989241612e-05
+linacc_Z_range_3_5s,3.30965461214377e-05
+linacc_Z_min_3_5s,3.228829405454672e-05
+gyro_y_max_3_5s,3.2160952135327955e-05
+accel_x_var_3_5s,3.203366213757739e-05
+accel_z_skew_0_5s,3.191095078078672e-05
+gyro_y_mean_0_5s,3.161711835552824e-05
+gyro_magnitude_std_2_0s,3.158326160084544e-05
+gyro_z_range_2_0s,3.1391622439664696e-05
+gyro_x_max_2_0s,3.0810018154899416e-05
+linacc_X_mean_3_5s,3.0448948287248636e-05
+linacc_Z_rms_3_5s,3.0139420557952504e-05
+gyro_magnitude_std_3_0s,2.942006573785789e-05
+orient_Direct (°)_skew_0_5s,2.8629618853651443e-05
+orient_Pitch (°)_skew_2_0s,2.8325862565283553e-05
+orient_y_rms_3_0s,2.81711050578464e-05
+accel_y_std_0_5s,2.8008909481113674e-05
+accel_z_std_0_5s,2.7936808678801726e-05
+gyro_magnitude_max_3_5s,2.7559919724067743e-05
+orient_Direct (°)_std_0_5s,2.740119918570244e-05
+linacc_Y_range_2_0s,2.6540183439658357e-05
+linacc_Y_rms_3_5s,2.634899116527541e-05
+gyro_x_min_2_0s,2.6260177895996483e-05
+orient_w_var_2_0s,2.605152860101344e-05
+gyro_y_max_0_5s,2.5313906061032205e-05
+accel_y_var_3_0s,2.4842305319245086e-05
+orient_Pitch (°)_rms_0_5s,2.3881294618034224e-05
+accel_x_skew_3_5s,2.3587425518800083e-05
+accel_y_skew_3_5s,2.2858299193868106e-05
+gyro_y_min_3_0s,2.2108588086503593e-05
+linacc_Z_rms_2_0s,2.1988666842762355e-05
+accel_z_kurt_3_5s,2.1653568060358383e-05
+pressure_X (hPa)_min_3_0s,2.163764056347177e-05
+accel_z_std_2_0s,2.14187984576475e-05
+orient_z_max_2_0s,2.1176767743403555e-05
+gyro_z_kurt_3_0s,2.1174885757169072e-05
+linacc_X_range_3_5s,2.1136074217651256e-05
+orient_w_var_0_5s,2.1105872547657745e-05
+orient_y_std_0_5s,2.109985786919115e-05
+orient_x_range_3_5s,2.109813861397751e-05
+orient_z_std_3_0s,2.107072697862476e-05
+orient_y_std_3_5s,2.1059463859741453e-05
+accel_x_var_0_5s,2.1046417617391506e-05
+orient_y_min_2_0s,2.104592363687445e-05
+linacc_X_max_2_0s,2.1034040704851814e-05
+pressure_X (hPa)_max_3_0s,2.089228060481855e-05
+orient_y_max_0_5s,2.080705445513976e-05
+linacc_X_rms_3_0s,2.07109985814667e-05
+orient_Direct (°)_skew_3_0s,2.0691544584150435e-05
+accel_x_range_3_0s,2.03728200973116e-05
+accel_y_skew_0_5s,1.9661150262288225e-05
+linacc_X_mean_0_5s,1.9403177424640555e-05
+orient_x_var_0_5s,1.937395789033125e-05
+orient_Pitch (°)_kurt_3_0s,1.914298458806315e-05
+gyro_x_range_0_5s,1.903683409948484e-05
+orient_Roll (°)_range_3_0s,1.8990544963502062e-05
+accel_x_mean_0_5s,1.8887922316606055e-05
+gyro_z_mean_2_0s,1.8866277679031517e-05
+gyro_y_std_3_0s,1.836963626849628e-05
+pressure_X (hPa)_skew_3_0s,1.8149370949036393e-05
+pressure_X (hPa)_mean_2_0s,1.7878548899310746e-05
+gyro_y_min_0_5s,1.7674348661782382e-05
+linacc_X_max_3_0s,1.7649396392597525e-05
+linacc_Z_max_2_0s,1.7350690741337834e-05
+orient_y_range_3_0s,1.7289227841531632e-05
+orient_y_range_0_5s,1.648222338938805e-05
+accel_magnitude_min_2_0s,1.506153814115246e-05
+orient_Pitch (°)_range_0_5s,1.4874870427957945e-05
+linacc_Z_rms_3_0s,1.430323251630954e-05
+orient_x_range_3_0s,1.4283403630572457e-05
+linacc_Z_std_0_5s,1.4238144199424772e-05
+linacc_Y_kurt_2_0s,1.422470406502722e-05
+orient_Pitch (°)_var_3_0s,1.4188577214408283e-05
+accel_x_kurt_0_5s,1.4188396388460902e-05
+orient_Pitch (°)_var_3_5s,1.4182256241270645e-05
+orient_w_skew_3_5s,1.4154704632273369e-05
+orient_y_var_3_5s,1.4153777180004514e-05
+orient_z_var_3_0s,1.4113961364397136e-05
+orient_x_var_3_5s,1.4095159515951586e-05
+orient_Pitch (°)_std_2_0s,1.4080208134307033e-05
+gyro_y_std_0_5s,1.4048304624037671e-05
+gyro_x_min_3_5s,1.4048085992649913e-05
+orient_y_std_3_0s,1.4017892757422091e-05
+gyro_y_std_3_5s,1.3832118123372143e-05
+linacc_Z_skew_3_5s,1.3598964069749522e-05
+gyro_y_max_3_0s,1.3063853276764965e-05
+gyro_y_var_0_5s,1.3038430923359697e-05
+orient_y_mean_0_5s,1.280521344878457e-05
+accel_magnitude_skew_3_5s,1.2653454464945628e-05
+orient_Yaw (°)_range_0_5s,1.2179377320765501e-05
+orient_y_max_2_0s,1.1467268795319353e-05
+linacc_Y_std_0_5s,1.1366055295660997e-05
+accel_magnitude_range_2_0s,1.085002352308623e-05
+linacc_X_skew_0_5s,1.073142358586593e-05
+pressure_X (hPa)_max_2_0s,1.0587902434561056e-05
+linacc_Z_max_3_0s,1.0204250941611775e-05
+linacc_X_range_2_0s,9.957348853299505e-06
+linacc_Z_var_2_0s,9.529897146841772e-06
+gyro_z_max_2_0s,9.43445079434636e-06
+accel_y_rms_3_0s,9.26039858791688e-06
+orient_Roll (°)_range_2_0s,8.605410447761197e-06
+gyro_y_range_3_0s,8.529326784166429e-06
+orient_x_std_0_5s,8.51077850723647e-06
+orient_Pitch (°)_mean_3_5s,7.1690070996032525e-06
+linacc_Z_skew_2_0s,7.1684104496886504e-06
+orient_w_range_3_0s,7.168105445598315e-06
+orient_Yaw (°)_var_0_5s,7.16226708074535e-06
+accel_y_var_2_0s,7.150245411335831e-06
+orient_z_std_3_5s,7.147705191712967e-06
+orient_x_var_3_0s,7.144042794558822e-06
+linacc_X_std_0_5s,7.143225873060953e-06
+pressure_X (hPa)_max_3_5s,7.134360896741939e-06
+orient_Yaw (°)_std_2_0s,7.128462985538548e-06
+orient_Yaw (°)_var_3_0s,7.121226605746014e-06
+orient_Pitch (°)_var_2_0s,7.117176270415527e-06
+accel_x_rms_2_0s,7.116383360740957e-06
+gyro_z_max_3_5s,7.113850526515825e-06
+gyro_y_min_3_5s,7.091923381126968e-06
+gyro_x_kurt_2_0s,7.091714771204648e-06
+linacc_X_var_0_5s,7.089499746865372e-06
+orient_Pitch (°)_std_3_0s,7.078937097023333e-06
+accel_magnitude_std_2_0s,7.076173991837651e-06
+gyro_y_var_3_0s,7.076083485377286e-06
+gyro_x_min_3_0s,7.072305240541883e-06
+pressure_X (hPa)_rms_3_5s,7.059529846526883e-06
+linacc_Y_range_0_5s,7.052599859137372e-06
+accel_y_std_3_5s,7.032965147549093e-06
+linacc_Y_kurt_0_5s,7.027508594727857e-06
+accel_y_rms_3_5s,7.02601492220724e-06
+linacc_X_var_2_0s,6.8692271654044205e-06
+gyro_magnitude_max_2_0s,6.862300062420779e-06
+gyro_y_var_2_0s,6.824937576790461e-06
+orient_z_kurt_3_0s,6.712896080130987e-06
+linacc_Y_var_3_5s,6.621348823795991e-06
+linacc_Z_kurt_0_5s,6.4887693796404895e-06
+orient_Roll (°)_skew_0_5s,6.448196863974502e-06
+pressure_X (hPa)_var_3_5s,6.437219539839736e-06
+orient_Pitch (°)_rms_3_5s,6.296647638469835e-06
+orient_Roll (°)_skew_2_0s,6.254280555382606e-06
+accel_magnitude_std_3_0s,6.114991672673943e-06
+orient_w_std_2_0s,5.948038598003782e-06
+pressure_X (hPa)_range_3_5s,5.938438873393313e-06
+pressure_X (hPa)_std_2_0s,5.654011902318898e-06
+orient_Roll (°)_max_3_0s,5.383425801261343e-06
+accel_y_skew_3_0s,5.367317338741518e-06
+linacc_X_var_3_5s,5.357676224611709e-06
+linacc_Z_min_2_0s,5.343710434199746e-06
+orient_Roll (°)_max_0_5s,5.320529457565534e-06
+gyro_x_var_3_5s,5.305383022774328e-06
+linacc_X_std_2_0s,4.830511327296597e-06
+orient_w_skew_3_0s,4.783413056884283e-06
+linacc_X_max_0_5s,4.7535050889004826e-06
+linacc_Z_range_2_0s,4.727275722062543e-06
+accel_magnitude_range_3_5s,3.5744532456533647e-06
+linacc_Z_mean_3_5s,3.5589100889520855e-06
+accel_y_range_2_0s,3.5521560473290765e-06
 gyro_x_kurt_3_0s,0.0
-gyro_y_kurt_3_0s,0.0
-orient_Pitch (°)_kurt_3_0s,0.0
+orient_Roll (°)_var_0_5s,0.0
+accel_magnitude_std_0_5s,0.0
+gyro_magnitude_range_3_0s,0.0
+accel_magnitude_min_0_5s,0.0
+gyro_magnitude_skew_3_5s,0.0
+orient_Roll (°)_kurt_0_5s,0.0
+accel_magnitude_var_0_5s,0.0
+gyro_magnitude_range_3_5s,0.0
+accel_magnitude_kurt_0_5s,0.0
+pressure_X (hPa)_kurt_3_5s,0.0
+gyro_magnitude_var_3_0s,0.0
+gyro_x_range_3_5s,0.0
+orient_Pitch (°)_kurt_3_5s,0.0
+pressure_X (hPa)_skew_3_5s,0.0
+gyro_magnitude_kurt_3_5s,0.0
+gyro_x_skew_3_0s,0.0
+orient_Pitch (°)_range_3_0s,0.0
+accel_magnitude_skew_0_5s,0.0
+accel_magnitude_range_0_5s,0.0
+orient_Pitch (°)_range_3_5s,0.0
+gyro_x_var_0_5s,0.0
+gyro_x_kurt_0_5s,0.0
+gyro_magnitude_kurt_3_0s,0.0
+gyro_magnitude_skew_3_0s,0.0
+gyro_x_kurt_3_5s,0.0
+gyro_x_skew_3_5s,0.0
+pressure_X (hPa)_var_0_5s,0.0
+pressure_X (hPa)_min_3_5s,0.0
+gyro_magnitude_skew_0_5s,0.0
+pressure_X (hPa)_skew_2_0s,0.0
+gyro_magnitude_var_0_5s,0.0
+pressure_X (hPa)_kurt_2_0s,0.0
+pressure_X (hPa)_var_2_0s,0.0
+gyro_magnitude_std_0_5s,0.0
+accel_magnitude_skew_3_0s,0.0
+orient_Roll (°)_std_3_5s,0.0
+pressure_X (hPa)_min_2_0s,0.0
+gyro_x_std_2_0s,0.0
+orient_Roll (°)_var_3_5s,0.0
+accel_magnitude_range_3_0s,0.0
+pressure_X (hPa)_rms_0_5s,0.0
+orient_Roll (°)_kurt_3_5s,0.0
+orient_Roll (°)_skew_3_5s,0.0
+orient_Roll (°)_range_3_5s,0.0
+gyro_x_range_3_0s,0.0
+pressure_X (hPa)_range_0_5s,0.0
+accel_magnitude_std_3_5s,0.0
+accel_magnitude_kurt_3_5s,0.0
+accel_magnitude_var_3_5s,0.0
+pressure_X (hPa)_std_0_5s,0.0
+accel_magnitude_min_3_5s,0.0
+pressure_X (hPa)_skew_0_5s,0.0
+gyro_magnitude_kurt_0_5s,0.0
+accel_magnitude_kurt_3_0s,0.0
+gyro_x_skew_0_5s,0.0
+orient_Roll (°)_skew_3_0s,0.0
+orient_Roll (°)_std_2_0s,0.0
+pressure_X (hPa)_std_3_5s,0.0
+accel_magnitude_var_2_0s,0.0
+accel_magnitude_kurt_2_0s,0.0
+pressure_X (hPa)_kurt_0_5s,0.0
+gyro_magnitude_range_2_0s,0.0
+gyro_magnitude_skew_2_0s,0.0
+gyro_magnitude_kurt_2_0s,0.0
+orient_Roll (°)_var_2_0s,0.0
+orient_Roll (°)_kurt_2_0s,0.0
+pressure_X (hPa)_range_3_0s,0.0
+accel_magnitude_skew_2_0s,0.0
+gyro_x_std_3_5s,0.0
+pressure_X (hPa)_kurt_3_0s,0.0
+pressure_X (hPa)_var_3_0s,0.0
+pressure_X (hPa)_std_3_0s,0.0
+gyro_x_range_2_0s,0.0
+gyro_x_skew_2_0s,0.0
+orient_Roll (°)_std_3_0s,0.0
+accel_magnitude_var_3_0s,0.0
+pressure_X (hPa)_range_2_0s,0.0
+orient_Roll (°)_var_3_0s,0.0
+orient_Roll (°)_kurt_3_0s,0.0
+pressure_X (hPa)_rms_3_0s,0.0
+linacc_Y_min_3_0s,0.0
+orient_Pitch (°)_range_2_0s,0.0
+accel_y_kurt_2_0s,0.0
+accel_z_var_3_0s,0.0
+linacc_X_std_3_0s,0.0
+accel_z_range_2_0s,0.0
+accel_z_skew_2_0s,0.0
+accel_z_kurt_2_0s,0.0
+linacc_X_kurt_3_0s,0.0
+linacc_X_skew_3_0s,0.0
+accel_z_range_0_5s,0.0
+accel_z_kurt_0_5s,0.0
+linacc_X_range_3_0s,0.0
+accel_y_range_3_5s,0.0
+accel_y_kurt_3_5s,0.0
+linacc_X_std_3_5s,0.0
+linacc_X_max_3_5s,0.0
+accel_y_range_3_0s,0.0
+accel_y_kurt_3_0s,0.0
+linacc_X_kurt_3_5s,0.0
+accel_z_kurt_3_0s,0.0
+accel_z_skew_3_0s,0.0
+linacc_X_skew_2_0s,0.0
+orient_w_kurt_2_0s,0.0
+orient_w_kurt_3_5s,0.0
+orient_w_var_3_5s,0.0
+gyro_z_kurt_3_5s,0.0
+gyro_z_skew_3_5s,0.0
 orient_w_kurt_3_0s,0.0
-linacc_Z_kurt_3_0s,0.0
-linacc_Y_kurt_3_0s,0.0
-linacc_Y_skew_3_0s,0.0
+orient_w_var_3_0s,0.0
+orient_w_skew_2_0s,0.0
+linacc_X_kurt_0_5s,0.0
+linacc_X_kurt_2_0s,0.0
+linacc_X_range_0_5s,0.0
+orient_w_range_0_5s,0.0
+orient_w_skew_0_5s,0.0
+orient_w_kurt_0_5s,0.0
+accel_z_range_3_5s,0.0
+accel_z_skew_3_5s,0.0
+accel_z_var_3_5s,0.0
+accel_y_skew_2_0s,0.0
+linacc_X_skew_3_5s,0.0
+orient_Pitch (°)_kurt_2_0s,0.0
+accel_y_kurt_0_5s,0.0
+linacc_Z_range_3_0s,0.0
 linacc_Z_skew_3_0s,0.0
+linacc_Z_kurt_3_0s,0.0
+linacc_Z_std_3_0s,0.0
+linacc_Z_kurt_2_0s,0.0
+linacc_Z_rms_0_5s,0.0
+linacc_Z_range_0_5s,0.0
+linacc_Z_skew_0_5s,0.0
+linacc_Z_var_0_5s,0.0
+linacc_Z_min_0_5s,0.0
+linacc_Z_mean_0_5s,0.0
+linacc_Y_skew_3_5s,0.0
+linacc_Y_kurt_3_5s,0.0
+linacc_Y_std_3_5s,0.0
+linacc_Y_rms_3_0s,0.0
+linacc_Y_skew_3_0s,0.0
+linacc_Y_kurt_3_0s,0.0
+linacc_Z_std_3_5s,0.0
+linacc_Z_max_3_5s,0.0
+linacc_Z_var_3_5s,0.0
+accel_x_std_3_0s,0.0
+accel_y_var_0_5s,0.0
+accel_x_range_3_5s,0.0
+accel_x_kurt_3_5s,0.0
+linacc_Y_skew_0_5s,0.0
+accel_x_std_3_5s,0.0
+accel_x_skew_3_0s,0.0
+accel_x_kurt_3_0s,0.0
+accel_x_range_2_0s,0.0
+linacc_Z_kurt_3_5s,0.0
+accel_x_skew_2_0s,0.0
+accel_x_kurt_2_0s,0.0
+accel_x_var_2_0s,0.0
+accel_x_max_2_0s,0.0
+accel_x_std_2_0s,0.0
+accel_x_range_0_5s,0.0
+linacc_Y_skew_2_0s,0.0
+gyro_x_std_0_5s,0.0
+orient_x_kurt_0_5s,0.0
+orient_x_skew_0_5s,0.0
+orient_x_range_0_5s,0.0
+orient_Yaw (°)_kurt_0_5s,0.0
+orient_Yaw (°)_std_0_5s,0.0
+orient_Direct (°)_skew_3_5s,0.0
+orient_Direct (°)_kurt_3_5s,0.0
+gyro_y_kurt_3_0s,0.0
+gyro_y_skew_3_0s,0.0
+orient_Direct (°)_std_3_5s,0.0
+orient_Direct (°)_kurt_3_0s,0.0
+gyro_y_var_3_5s,0.0
+gyro_y_kurt_3_5s,0.0
+orient_Direct (°)_range_2_0s,0.0
+orient_Direct (°)_skew_2_0s,0.0
+orient_Direct (°)_kurt_2_0s,0.0
+gyro_y_skew_3_5s,0.0
+gyro_y_range_3_5s,0.0
+orient_Direct (°)_kurt_0_5s,0.0
+gyro_z_kurt_0_5s,0.0
+orient_Yaw (°)_skew_0_5s,0.0
+gyro_y_skew_2_0s,0.0
+orient_Yaw (°)_var_2_0s,0.0
+orient_Yaw (°)_kurt_3_5s,0.0
+orient_Pitch (°)_skew_0_5s,0.0
+orient_Pitch (°)_kurt_0_5s,0.0
+orient_Pitch (°)_std_0_5s,0.0
+gyro_y_kurt_0_5s,0.0
+gyro_y_skew_0_5s,0.0
+orient_Yaw (°)_range_3_5s,0.0
+orient_Yaw (°)_skew_3_5s,0.0
+gyro_y_range_0_5s,0.0
+orient_Yaw (°)_kurt_2_0s,0.0
+gyro_y_std_2_0s,0.0
+orient_Yaw (°)_range_3_0s,0.0
+orient_Yaw (°)_skew_3_0s,0.0
+orient_Yaw (°)_kurt_3_0s,0.0
+gyro_y_kurt_2_0s,0.0
+orient_Yaw (°)_range_2_0s,0.0
+orient_Yaw (°)_skew_2_0s,0.0
+gyro_z_skew_0_5s,0.0
+orient_z_range_3_5s,0.0
+orient_z_skew_3_5s,0.0
+orient_x_std_3_5s,0.0
+orient_y_kurt_2_0s,0.0
+orient_y_mean_2_0s,0.0
+orient_y_skew_0_5s,0.0
+orient_y_kurt_0_5s,0.0
+orient_y_min_0_5s,0.0
+orient_x_skew_3_5s,0.0
+orient_x_kurt_3_5s,0.0
+orient_x_skew_3_0s,0.0
+orient_y_range_2_0s,0.0
+orient_x_kurt_3_0s,0.0
+orient_x_rms_2_0s,0.0
+orient_x_range_2_0s,0.0
+orient_x_skew_2_0s,0.0
+orient_x_kurt_2_0s,0.0
+gyro_z_skew_3_0s,0.0
+gyro_z_range_3_0s,0.0
+orient_y_skew_2_0s,0.0
+orient_y_kurt_3_0s,0.0
+orient_z_kurt_3_5s,0.0
+orient_z_range_0_5s,0.0
+gyro_z_kurt_2_0s,0.0
+orient_z_range_3_0s,0.0
+orient_z_skew_3_0s,0.0
+gyro_z_skew_2_0s,0.0
+orient_z_range_2_0s,0.0
+orient_z_skew_2_0s,0.0
+orient_z_kurt_2_0s,0.0
+orient_z_skew_0_5s,0.0
+orient_y_skew_3_0s,0.0
+orient_z_kurt_0_5s,0.0
+orient_z_var_0_5s,0.0
+orient_y_range_3_5s,0.0
+orient_y_skew_3_5s,0.0
+orient_y_kurt_3_5s,0.0
+orient_y_max_3_5s,0.0
+orient_y_mean_3_5s,0.0
+orient_z_std_2_0s,0.0
