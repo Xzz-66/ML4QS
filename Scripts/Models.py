@@ -16,6 +16,7 @@ import joblib
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DATA_DIR = BASE_DIR / "Datasets" 
+PLOT_DIR   = BASE_DIR / "plots"
 RANDOM_STATE = 42
 tune = True
 
@@ -72,10 +73,13 @@ def evaluate_model(y_test, y_pred, fold, all_classes = [0, 1, 2]):
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
                 xticklabels=all_classes,
                 yticklabels=all_classes)
-    plt.title(f'Confusion Matrix for fold {fold}')
+    plt.title(f'Confusion Matrix')
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
-    plt.show()
+    path = PLOT_DIR / "Confusion_Matrix.png"
+    plt.savefig(path, dpi=150, bbox_inches="tight")
+    print(f"\nComparison plot saved to {path}")
+    plt.close()
 
     return {
         'accuracy': accuracy,

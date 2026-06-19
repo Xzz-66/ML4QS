@@ -21,7 +21,7 @@ BASE_DATA_DIR = BASE_DIR / "Datasets"
 PLOT_DIR   = BASE_DIR / "plots"
 
 SAMPLE_RATE = 50
-WINDOW_SIZES = [0.5, 2.0, 3.0, 3.5]  # Window sizes in seconds TODO: compare different window sizes for performance
+WINDOW_SIZES = [3.0]  # Window sizes in seconds TODO: compare different window sizes for performance
 FREQ_WINDOW_SIZE = '3s'  # Window size for frequency features
 MAX_DECIMALS = 4  # Maximum decimal places to keep
 NPERSG = 128
@@ -191,6 +191,13 @@ def process_combined_data():
 
     sensor_cols = [col for col in df_.columns if col not in excluded_cols]
 
+    print("\n" + "="*60)
+    print("Data Before Feature Engineering")
+    print("="*60)
+    print(f"Data Shape: {df_.shape}")
+    print(f"Rows: {df_.shape[0]}")
+    print(f"Columns: {df_.shape[1]}")
+
 
     feat_results = []
     for (subj, exercise, session), group_df in df_.groupby(['subject_id', 'exercise_type', 'session']):
@@ -218,6 +225,24 @@ def process_combined_data():
     print(f"Data Shape: {features_df.shape}")
     print(f"Rows: {features_df.shape[0]}")
     print(f"Columns: {features_df.shape[1]}")
+
+        # --- compute global correlated columns to drop
+    feature_cols = [col for col in features_df.columns if col not in 
+                    ['subject_id', 'exercise_type', 'session', 'exercise_class', 'unique_exer_id']]
+
+    X_full = features_df[feature_cols].replace([np.inf, -np.inf], np.nan)
+    X_full = X_full.dropna(axis=1, how='all')
+
+    imputer_full = SimpleImputer(strategy="median")
+    X_full_imputed = pd.DataFrame(imputer_full.fit_transform(X_full), columns=X_full.columns, index=X_full.index)
+
+    corr = X_full_imputed.corr().abs()
+    upper = corr.where(np.triu(np.ones(corr.shape), k=1).astype(bool))
+    global_to_drop = [col for col in upper.columns if any(upper[col] > 0.95)]
+
+    print(f"Globally dropping {len(global_to_drop)} correlated columns")
+
+    feature_cols = [c for c in feature_cols if c not in global_to_drop]  # updated feature list
 
 
     total_before_corr = []
@@ -254,10 +279,13 @@ def process_combined_data():
         #     print(to_drop[:20])
 
         X = X.drop(columns = to_drop)
+        
 
         feats_after = X.shape[1]
         total_after_corr.append(feats_after)
         # print(f"Features after correlation filtering: {feats_after}")
+
+        group = group.drop(columns = to_drop)
         
 
 
@@ -288,6 +316,7 @@ def process_combined_data():
         
 
     features_df = pd.concat(lof_results, ignore_index=True)  
+    features_df.dropna(axis = 1, how = 'all')
     avg_feats_before = np.round(np.mean(total_before_corr))
     avg_feats_after = np.round(np.mean(total_after_corr))
 
