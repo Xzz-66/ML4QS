@@ -9,8 +9,8 @@ from scipy.signal import find_peaks
 pd.set_option("display.max_columns", 50)
 plt.rcParams["axes.grid"] = True
 
-DATA_ROOT = "../Datasets/Subjects"
-FIGURES_DIR = "./figures"
+DATA_ROOT = "./Datasets/Subjects"
+FIGURES_DIR = "./plots"
 
 SENSOR_FILES = {
     "accelerometer": ["Accelerometer.csv"],
